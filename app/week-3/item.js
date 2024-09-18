@@ -1,10 +1,10 @@
 // item.js
 export default function Item({ name, quantity, category }) {
     return (
-      <li className="flex justify-between items-center p-4 bg-gray-800 text-white rounded-lg shadow-md mb-2">
+      <li className="p-4 bg-gray-800 text-white">
         <div>
-          <span className="font-bold text-lg">{name}</span>
-          <p className="text-gray-400">Buy {quantity} in {category}</p>
+          <h2 className="font-bold text-xl">{name}</h2>
+          <p className="text-violet-400">Buy {quantity} in {category}</p>
         </div>
       </li>
     );
