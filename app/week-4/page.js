@@ -1,39 +1,72 @@
 "use client";
+import { useState } from "react";
 
-import React, { useState } from 'react';
-
-const NewItem = () => {
+function CounterExample() {
     const [quantity, setQuantity] = useState(1);
 
     const increment = () => {
-        setQuantity(prevQuantity => Math.min(prevQuantity + 1, 20));
+        setQuantity(prevQuantity => {
+            if (prevQuantity < 20) {
+                return prevQuantity + 1;
+            } else {
+                return prevQuantity;
+            }
+        });
     };
 
     const decrement = () => {
-        setQuantity(prevQuantity => Math.max(prevQuantity - 1, 1));
+        setQuantity(prevQuantity => {
+            if (prevQuantity > 1) {
+                return prevQuantity - 1;
+            } else {
+                return prevQuantity;
+            }
+        });
     };
 
     return (
-        <div className="flex flex-col items-center p-4 bg-gray-100 rounded-lg shadow-md">
-            <div className="text-xl font-bold mb-4">Quantity: {quantity}</div>
-            <div className="flex space-x-4">
-                <button
-                    onClick={decrement}
-                    disabled={quantity === 1}
-                    className="px-4 py-2 bg-red-500 text-white rounded disabled:opacity-50"
+        <div style={{ 
+            backgroundColor: 'black', 
+            color: 'white', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            justifyContent: 'center', 
+            height: '100vh' 
+        }}>
+            <p>Quantity: {quantity}</p>
+            <div>
+                <button 
+                    onClick={increment} 
+                    style={{ 
+                        margin: '5px', 
+                        padding: '10px', 
+                        backgroundColor: 'green', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px', 
+                        cursor: 'pointer' 
+                    }}
                 >
-                    Decrement
+                    +
                 </button>
-                <button
-                    onClick={increment}
-                    disabled={quantity === 20}
-                    className="px-4 py-2 bg-green-500 text-white rounded disabled:opacity-50"
+                <button 
+                    onClick={decrement} 
+                    style={{ 
+                        margin: '5px', 
+                        padding: '10px', 
+                        backgroundColor: 'red', 
+                        color: 'white', 
+                        border: 'none', 
+                        borderRadius: '5px', 
+                        cursor: 'pointer' 
+                    }}
                 >
-                    Increment
+                    -
                 </button>
             </div>
         </div>
     );
-};
+}
 
-export default NewItem;
+export default CounterExample;
