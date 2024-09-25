@@ -34,36 +34,44 @@ function CounterExample() {
             justifyContent: 'center', 
             height: '100vh' 
         }}>
-            <p>Quantity: {quantity}</p>
-            <div>
-                <button 
-                    onClick={increment} 
-                    style={{ 
-                        margin: '5px', 
-                        padding: '10px', 
-                        backgroundColor: 'green', 
-                        color: 'white', 
-                        border: 'none', 
-                        borderRadius: '5px', 
-                        cursor: 'pointer' 
-                    }}
-                >
-                    +
-                </button>
-                <button 
-                    onClick={decrement} 
-                    style={{ 
-                        margin: '5px', 
-                        padding: '10px', 
-                        backgroundColor: 'red', 
-                        color: 'white', 
-                        border: 'none', 
-                        borderRadius: '5px', 
-                        cursor: 'pointer' 
-                    }}
-                >
-                    -
-                </button>
+            <div style={{ 
+                backgroundColor: 'white', 
+                color: 'black', 
+                padding: '20px', 
+                borderRadius: '10px', 
+                textAlign: 'center' 
+            }}>
+                <p>Quantity: {quantity}</p>
+                <div>
+                    <button 
+                        onClick={increment} 
+                        style={{ 
+                            margin: '5px', 
+                            padding: '10px', 
+                            backgroundColor: 'green', 
+                            color: 'white', 
+                            border: 'none', 
+                            borderRadius: '5px', 
+                            cursor: 'pointer' 
+                        }}
+                    >
+                        +
+                    </button>
+                    <button 
+                        onClick={decrement} 
+                        style={{ 
+                            margin: '5px', 
+                            padding: '10px', 
+                            backgroundColor: 'red', 
+                            color: 'white', 
+                            border: 'none', 
+                            borderRadius: '5px', 
+                            cursor: 'pointer' 
+                        }}
+                    >
+                        -
+                    </button>
+                </div>
             </div>
         </div>
     );
