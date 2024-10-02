@@ -1,13 +1,12 @@
-
 export default function Page() {
     return (
-        <div>
-            <h1> CPRG 306: Web Development 2 - Assignments</h1>
-            <ul>
-                <li><a href="week-2">Week 2</a></li>
-                <li><a href="week-3">Week 3</a></li>
-                <li><a href="week-4">Week 4</a></li>
-                <li><a href="week-5">Week </a></li>
+        <div className="min-h-screen bg-gray-100 p-6">
+            <h1 className="text-2xl font-bold mb-6">CPRG 306: Web Development 2 - Assignments</h1>
+            <ul className="list-disc text-lg pl-6">
+                <li><a href="week-2" className="text-blue-500 hover:underline">Week 2</a></li>
+                <li><a href="week-3" className="text-blue-500 hover:underline">Week 3</a></li>
+                <li><a href="week-4" className="text-blue-500 hover:underline">Week 4</a></li>
+                <li><a href="week-5" className="text-blue-500 hover:underline">Week 5</a></li>
             </ul>
         </div>
     );
